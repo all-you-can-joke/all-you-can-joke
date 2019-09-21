@@ -6,9 +6,3 @@ runtime: php72
 # run a long-running PHP script as a worker process (e.g. "php worker.php").
 #
 # entrypoint: serve index.php
-- url: /(.+\.php)$
-  http_headers:
-    Access-Control-Allow-Origin: *
-    Access-Control-Allow-Methods: PUT, GET, POST, DELETE, OPTIONS
-    Access-Control-Allow-Headers: X-PINGOTHER, origin, x-requested-with, content-type
-    Access-Control-Max-Age: 86400

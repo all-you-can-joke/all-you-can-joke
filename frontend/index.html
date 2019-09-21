@@ -6,6 +6,23 @@
   <title>ALL YOU CAN JOKE Homepage</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Load fav and touch icons -->
+  <link rel="shortcut icon" href="/img/favicon_64px.png">
+
+  <!-- iOS integration -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AYCJ">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" sizes="192x192" href="/img/touchicon_192px.png">
+  <link rel="apple-touch-startup-image" href="img/launch.png">
+  <!-- iPhone X, Xs (1125px x 2436px) -->
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="img/apple-launch-1125x2436.png">
+
+  <!-- Android integration -->
+  <link rel="icon" sizes="192x192" href="/icons/icon.png">
+  <meta name="theme-color" content="#FCEA4F">
+
   <style>
   .larger-aycj-logo {
     padding-top: 40px;
@@ -44,14 +61,9 @@
       <div class="col-12 col-md-6 center-align">
         <form id="joke_form" action="https://all-you-can-joke-sbuhacks.appspot.com/index.php" method="get">
           <div class="form-group">
-            <input type="text" class="form-control" id="query" aria-describedby="searchBar" placeholder="Search Google or type URL">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your crush with anyone else.</small>
+            <input type="text" class="form-control" id="query" aria-describedby="searchBar" placeholder="Ask away...">
           </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="crushCheck">
-            <label class="form-check-label" for="crushCheck">But... please share results with my crush!</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Search</button>
+          <button type="submit" class="btn btn-primary">Laughbait</button>
           <button type="submit" class="btn btn-danger">Confused?</button>
         </form>
       <div class="col-12 col-md-3"></div>

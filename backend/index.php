@@ -1,4 +1,6 @@
 <?php
+// enable CORS
+ header("Access-Control-Allow-Origin: *");
 // define the question
 $question = $_GET["query"];
 // echo $question;
