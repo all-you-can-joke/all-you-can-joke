@@ -13,7 +13,7 @@ foreach ($joke_list as $qa_set) {
   $obj = json_decode($qa_set_json);
   $q = $obj->{'Question'};
   $a = $obj->{'Answer'};
-  if ($question == $q){
+  if (strtolower($question) == strtolower($q)){
     echo $a;
   }
 }
