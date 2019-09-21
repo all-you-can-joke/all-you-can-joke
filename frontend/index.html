@@ -6,6 +6,22 @@
   <title>ALL YOU CAN JOKE Homepage</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <style>
+  .larger-aycj-logo {
+    padding-top: 40px;
+    width: 55%;
+  }
+  @media (min-width: 576px) {
+    .larger-aycj-logo {
+      padding-top: 80px;
+      width: 300px;
+      transition: padding 1s;
+    }
+  }
+  #result-bar {
+    transition: opacity 1s;
+  }
+  </style>
 </head>
 
 <body>
@@ -22,10 +38,11 @@
   </header>
 
   <div class="container">
-    <div class="row">
+    <img src="img/aycj.png" class="mx-auto d-block larger-aycj-logo" alt="All You Can Joke">
+    <div class="row" id="search-bar">
       <div class="col-12 col-md-3"></div>
       <div class="col-12 col-md-6 center-align">
-        <form id="joke_form" action="https://allyoucanjoke.appspot.com/index.php" method="get">
+        <form id="joke_form" action="https://all-you-can-joke-sbuhacks.appspot.com/index.php" method="get">
           <div class="form-group">
             <input type="text" class="form-control" id="query" aria-describedby="searchBar" placeholder="Search Google or type URL">
             <small id="emailHelp" class="form-text text-muted">We'll never share your crush with anyone else.</small>
@@ -40,6 +57,17 @@
       <div class="col-12 col-md-3"></div>
     </div>
   </div>
+
+  <div class="row" id="result-bar" style="opacity: 0;">
+    <div class="col-12 col-md-3"></div>
+    <div class="col-12 col-md-6">
+      <h2 style="padding-top: 45px; font-size: 1.5em;">Results:</h2>
+      <p id="server-results" style="font-size: 2.5em;">Here will be the results.</p>
+    </div>
+    <div class="col-12 col-md-3"></div>
+  </div>
+</div>
+
 
   <footer>
     <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark">
