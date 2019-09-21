@@ -2,35 +2,24 @@
 
 // define the question
 $question = $_GET["query"];
-// load file
-$joke_list = file_get_contents("joke_list.json");
+// load and decode JSON
+$joke_list = json_decode(file_get_contents("joke_list.json"));
+// iterate array to find matching question
 
-// decode JSON into an array
-$array = json_decode($string, true);
+echo urlencode("dadj adj");
+echo $joke_list;
 
-// pick a random index
-$one_item = $array[rand(0, count($array) - 1)];
-
-// data process
-$one_item_json = json_encode($one_item); // convert back to JSON
-$obj = json_decode($one_item_json);
-$quote = $obj->{'Quote'}; // quote in plain text
-$author = $obj->{'Author'}; // author in plain text
-
-// output options
-if ($_GET["output"] === "json") {
-  echo $one_item_json;
-}
-else if ($_GET["output"] === "quote-only") {
-  echo $quote;
-}
-else if ($_GET["output"] === "double-hyphen") {
-  echo "$quote —— $author";
-}
-else if ($_GET["output"] === "no-hyphen") {
-  echo "$quote $author";
-}
-else {
-  echo "$quote — $author";
-}
+// foreach ($joke_list as $qa) {
+//   foreach ($qa as $key => $value) {
+//     if ($key == "Question") {
+//       foreach ($value as $q) {
+//         echo $qa[1];
+//         // echo urlencode($qa[1][0])."\n";
+//         if ($q == urlencode($question)) {
+//           echo $qa[1][rand(0, count($qa[1]) - 1)];
+//         }
+//       }
+//     }
+//   }
+// }
 ?>
